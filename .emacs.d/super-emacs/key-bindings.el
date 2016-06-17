@@ -1,5 +1,6 @@
 (defvar super-emacs--my-keyboard-bindings 
-  '(("C-}" . mc/mark-next-like-this)
+  '(("C-S-c C-S-c" . mc/edit-lines)
+    ("C-}" . mc/mark-next-like-this)
     ("C-{" . mc/mark-previous-like-this)
     ("C-|" . mc/mark-all-like-this)
     ("C->" . ace-jump-mode)
@@ -14,7 +15,7 @@
     ("C-x C-f" . helm-find-files)
     ("C-x C-r" . helm-recentf)
     ("M-y" . helm-show-kill-ring)
-    ("C-M-z" . switch-window)
+    ("C-c o" . switch-window)
     ("C-S-<up>" . buf-move-up)
     ("C-S-<down>" . buf-move-down)
     ("C-S-<left>" . buf-move-left)

@@ -6,10 +6,8 @@
         (t (message "You're not editing a file!"))))
 
 ;Disable splash message, start *scratch* buffer by default
-(setq initial-buffer-choice 
-      t)
-(setq initial-scratch-message 
-      "")
+;;(setq initial-buffer-choice t)
+;;(setq initial-scratch-message "")
 
 ;Enforce spaces for indentation, instead of tabs
 (setq-default indent-tabs-mode 
@@ -23,3 +21,9 @@
 
 ;Enable windmove
 (windmove-default-keybindings)
+
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(global-whitespace-mode 1)
+(electric-pair-mode 1)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)

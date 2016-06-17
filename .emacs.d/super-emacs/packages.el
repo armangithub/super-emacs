@@ -16,7 +16,11 @@
     material-theme
     meta-presenter
     myterminal-controls
-    theme-looper))
+    theme-looper
+    helm-projectile
+    projectile
+    ansible-doc
+    ansible))
 
 ;Install required packages
 (mapc (lambda (p)
@@ -30,12 +34,12 @@
 (global-undo-tree-mode)
 
 ;Set up ace-jump-mode
-(autoload 'ace-jump-mode 
-  "ace-jump-mode" 
+(autoload 'ace-jump-mode
+  "ace-jump-mode"
   "Emacs quick move minor mode"
   t)
-(autoload 'ace-jump-mode-pop-mark 
-  "ace-jump-mode" 
+(autoload 'ace-jump-mode-pop-mark
+  "ace-jump-mode"
   "Ace jump back:-"
   t)
 
@@ -61,3 +65,8 @@
 (helm-autoresize-mode 1)
 (setq helm-split-window-in-side-p
       t)
+
+;; projectile configuration
+(projectile-global-mode)
+(require 'helm-projectile)
+(helm-projectile-on)
